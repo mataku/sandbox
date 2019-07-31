@@ -1,0 +1,2 @@
+include ':app', ':core', ':dynamicfeature', ':component:core'
+rootProject.name='MultiModuleDataBinding'
