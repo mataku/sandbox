@@ -1,4 +1,4 @@
-package com.mataku.compose
+package com.example.compose
 
 import org.junit.Test
 
