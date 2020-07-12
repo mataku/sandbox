@@ -32,6 +32,7 @@ local.properties
 .idea/kotlinScripting.xml
 .idea/$CACHE_FILE$
 .idea/jarRepositories.xml
+.idea/inspectionProfiles
 !.idea/codeStyles/
 !.idea/dictionaries/
 
