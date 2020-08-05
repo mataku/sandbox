@@ -1,0 +1,39 @@
+<template format="5"
+        revision="1"
+        name="ViewModel Template"
+        description="Creates a new ViewModel with test">
+
+    <category value="Other"/>
+
+    <parameter id="moduleName"
+      name="Module Name"
+      type="string"
+      constraints="nonempty"
+      default="app"
+      help="The name of module to place ViewModel" />
+
+    <parameter id="className"
+      name="ViewModel Name"
+      type="string"
+      constraints="class|unique|nonempty"
+      default="MainViewModel"
+      help="The name of ViewModel" />
+
+    <parameter
+      id="includeViewModelFactory"
+      name="Configure ViewModelFactory?"
+      type="boolean"
+      default="true"
+      help="Generate ViewModelFactory class" />
+
+    <parameter
+      id="packageName"
+      name="Package name"
+      type="string"
+      constraints="package"
+      default="com.mataku.myapp"/>
+
+    <globals file="globals.xml.ftl" />
+    <execute file="recipe.xml.ftl" />
+
+</template>
