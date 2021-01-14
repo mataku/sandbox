@@ -1,0 +1,31 @@
+name: Danger
+
+on: [pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-20.04
+    strategy:
+      matrix:
+        ruby: [2.4, 2.5, 2.6, 2.7, 3.0]
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/cache@v1
+      with:
+        path: ruby/vendor/bundle
+        key: ${{ runner.os }}-gem-${{ hashFiles('**/Gemfile') }}
+        restore-keys: |
+          ${{ runner.os }}-gem-
+    - name: Set up Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: ${{ matrix.ruby }}
+    - name: Run danger
+      env:
+        DANGER_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        cd ruby
+        gem i bundler -v 2.1.4
+        bundle config --local set path 'vendor/bundle'
+        bundle install --jobs=$(($(nproc) - 1))
+        bundle exec danger
