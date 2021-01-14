@@ -1,0 +1,2 @@
+warn("Ping from #{`ruby -v`}", file: 'ruby/Dangerfile', line: 1)
+fail("Ping from #{`ruby -v`}", file: 'ruby/Dangerfile', line: 2)
