@@ -1,0 +1,25 @@
+[
+	{
+		"file": "Model.kt",
+		"errors": [
+			{
+				"line": 1,
+				"column": 13,
+				"message": "Unnecessary block (\"{}\")",
+				"rule": "no-empty-class-body"
+			},
+			{
+				"line": 2,
+				"column": 1,
+				"message": "Unexpected blank line(s) before \"}\"",
+				"rule": "no-blank-line-before-rbrace"
+			},
+			{
+				"line": 3,
+				"column": 1,
+				"message": "Needless blank line(s)",
+				"rule": "no-consecutive-blank-lines"
+			}
+		]
+	}
+]

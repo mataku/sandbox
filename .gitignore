@@ -15,3 +15,4 @@
 *.keystore
 *.jks
 google-services.json
+vendor
