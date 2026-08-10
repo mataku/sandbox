@@ -1,0 +1,11 @@
+name: Check gh on ubuntu-slim
+
+on:
+  workflow_dispatch:
+
+jobs:
+  check-gh:
+    runs-on: ubuntu-slim
+    steps:
+      - name: Show gh help
+        run: gh --help
